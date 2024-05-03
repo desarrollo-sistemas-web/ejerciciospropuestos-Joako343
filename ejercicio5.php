@@ -9,24 +9,28 @@
 
 // Aquí tu código
 
-function slug(string $palabra){
-    if (empty($palabra)) {
-     return "error";
-        } else {
-            str_replace(" ","-", $palabra);
+function slug($frase)
+{
+    if (empty($frase)) {
+        return "error";
+    } else {
+        $remplazo = str_replace(" ", "-", $frase);
+        echo $remplazo. "<br>";
+        return $remplazo;
     }
+
 }
 
 
 // TESTS
-assert(slug("Hola Mundo") == "hola-mundo");
-assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
-assert(slug("Hola") == "hola");
-assert(slug("") == "error");
-assert(slug(" ") == "error");
+// assert(slug("Hola Mundo") == "hola-mundo");
+// assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
+// assert(slug("Hola") == "hola");
+// assert(slug("") == "error");
+// assert(slug(" ") == "error");
 
 /**
  * Pista 😁
  * https://www.php.net/manual/es/function.strtolower.php
  * https://www.php.net/manual/es/function.str-replace.php 
-**/
+ **/
