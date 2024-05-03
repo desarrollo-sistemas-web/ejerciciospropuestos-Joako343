@@ -5,9 +5,20 @@
 // Si el operador no es válido, la función deberá devolver -1.
 
 // Aquí tu código
-
-
-
+function operacion($a, $b, $c)
+{
+    if ($c == '+') {
+        return $a + $b;
+    } elseif ($c == '-') {
+        return $a - $b;
+    } elseif ($c == '*') {
+        return $a * $b;
+    } elseif ($c == '/') {
+        return $a / $b;
+    } else{
+        return -1;
+    }
+}
 
 // TESTS
 assert(operacion(1, 1, '+') == 2);

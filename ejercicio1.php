@@ -3,8 +3,9 @@
 // Desarrolla una función con el nombre "areaTriangulo" para calcular el área de un triángulo.
 
 // Aquí tu código
-
-
+function areaTriangulo($area1, $area2) {
+    return ($area1 * $area2) / 2;
+}
 
 // TESTS
 assert(areaTriangulo(1, 1) == 0.5);

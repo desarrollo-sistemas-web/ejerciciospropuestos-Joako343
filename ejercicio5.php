@@ -9,7 +9,19 @@
 
 // Aquí tu código
 
+function slug($frase)
 
+{
+    if (empty($frase)) {
+        return "error";
+    } else {
+        $remplazo = strtolower($frase);
+        $remplazo = str_replace(" ", "-", $remplazo);
+        echo $remplazo. "<br>";
+        return $remplazo;
+    }
+
+}
 
 
 // TESTS
@@ -19,11 +31,8 @@ assert(slug("Hola") == "hola");
 assert(slug("") == "error");
 assert(slug(" ") == "error");
 
-
-
-
 /**
  * Pista 😁
  * https://www.php.net/manual/es/function.strtolower.php
  * https://www.php.net/manual/es/function.str-replace.php 
-**/
+ **/
