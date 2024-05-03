@@ -10,11 +10,13 @@
 // Aquí tu código
 
 function slug($frase)
+
 {
     if (empty($frase)) {
         return "error";
     } else {
-        $remplazo = str_replace(" ", "-", $frase);
+        $remplazo = strtolower($frase);
+        $remplazo = str_replace(" ", "-", $remplazo);
         echo $remplazo. "<br>";
         return $remplazo;
     }
@@ -23,11 +25,11 @@ function slug($frase)
 
 
 // TESTS
-// assert(slug("Hola Mundo") == "hola-mundo");
-// assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
-// assert(slug("Hola") == "hola");
-// assert(slug("") == "error");
-// assert(slug(" ") == "error");
+assert(slug("Hola Mundo") == "hola-mundo");
+assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
+assert(slug("Hola") == "hola");
+assert(slug("") == "error");
+assert(slug(" ") == "error");
 
 /**
  * Pista 😁
