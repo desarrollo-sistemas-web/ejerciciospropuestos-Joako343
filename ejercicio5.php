@@ -9,7 +9,13 @@
 
 // Aquí tu código
 
-
+function slug(string $palabra){
+    if (empty($palabra)) {
+     return "error";
+        } else {
+            str_replace(" ","-", $palabra);
+    }
+}
 
 
 // TESTS
@@ -18,9 +24,6 @@ assert(slug("Hola Mundo Cruel") == "hola-mundo-cruel");
 assert(slug("Hola") == "hola");
 assert(slug("") == "error");
 assert(slug(" ") == "error");
-
-
-
 
 /**
  * Pista 😁
